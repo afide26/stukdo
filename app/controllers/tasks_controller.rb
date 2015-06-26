@@ -6,7 +6,9 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = current_user.tasks
+    @todo= current_user.tasks.where(state:"to do")
+    @doing= current_user.tasks.where(state:"doing")
+    @done= current_user.tasks.where(state:"done")
     respond_with(@tasks)
   end
 
@@ -64,6 +66,6 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:content)
+      params.require(:task).permit(:content, :state)
     end
 end
