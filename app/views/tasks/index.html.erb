@@ -2,7 +2,7 @@
 
 <h1>Listing Tasks</h1>
 
-<table>
+<table class="table table-striped table-hover">
   <thead>
     <tr>
       <th>Content</th>
@@ -10,13 +10,13 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody >
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.content %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-center"><%= link_to 'Show', task, class:"btn btn-primary" %></td>
+        <td class="text-center"><%= link_to 'Edit', edit_task_path(task),class:"btn btn-info" %></td>
+        <td class="text-center"><%= link_to 'Delete', task, class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Task', new_task_path %>
+<%= link_to 'New Task', new_task_path, class: "btn btn-primary btn-block" %>
