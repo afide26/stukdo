@@ -3,8 +3,8 @@
   <div class="panel-heading">
     <%= link_to edit_task_path(task) do %>
     Created <%= time_ago_in_words(task.created_at) %><br/>
-    Last Update <%= time_ago_in_words(task.updated_at) %>
     <%end%>
+    Last Update <%= time_ago_in_words(task.updated_at) %>
     <%= link_to "<i class='fa fa-times'></i>".html_safe, task_path(task), method: :delete, data: {confirm: "Are you sure?"}, class:"pull-right" %>
   </div>
 
