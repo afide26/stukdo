@@ -27,12 +27,11 @@
   margin-bottom: 10px;
 }
 
-.btn-primary, .btn-info, .btn-success, .btn-danger{
-  min-width: 100px;
+.btn-primary, .btn-info, .btn-success, .btn-danger, .btn-default{
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.25em;
-  padding: 5px 0 5px 0;
+  font-size: 1em;
+  padding: 0 3px 0 3px;
   margin: 0 2px 0 2px;
 }
 
@@ -46,5 +45,15 @@
   background: linear-gradient(to bottom,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); /* IE6-9 */
 
+}
+@media screen and (min-width: 460px){
+  /* TABLE */
 
+  .todotable{
+    position: relative;
+    width: 80%; 
+    margin: 0 auto;
+    padding: 15px;
+}
+  
 }
