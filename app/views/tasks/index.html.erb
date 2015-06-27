@@ -5,55 +5,28 @@
 
   <table class="table table-striped table-hover">
     <thead>
-      <tr>
-        <th>Task ID</th>
-        <th>Content</th>
-        <th>State</th>
-        <th colspan="4"></th>
-      </tr>
+      <%= render 'tableheader'%>
     </thead>
 
     <tbody >
       <% @todo.each do |task| %>
-        <tr>
-          <td><%= task.id %></td>
-          <td><%= task.content %></td>
-           <td><%= task.state %></td>
-          <td class="text-center"><%= link_to 'Show', task, class:"btn btn-primary" %></td>
-          <td class="text-center"><%= link_to 'Edit', edit_task_path(task),class:"btn btn-info" %></td>
-          <td class="text-center"><%= link_to 'Delete', task, class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <td class="text-center"><%=link_to "Doing", change_task_path(task, state:"doing"), class:"btn btn-default", method: :put %></td>
-        </tr>
+        <%= render task %>
       <% end %>
     </tbody>
   </table>
 
   <br>
 
-  <h1>Current</h1>
+  <h1>Doing</h1>
 
   <table class="table table-striped table-hover">
     <thead>
-      <tr>
-        <th>Task ID</th>
-        <th>Content</th>
-        <th>State</th>
-        <th colspan="4"></th>
-      </tr>
+      <%= render 'tableheader'%>
     </thead>
 
     <tbody >
       <% @doing.each do |task| %>
-        <tr>
-          <td><%= task.id %></td>
-          <td><%= task.content %></td>
-           <td><%= task.state %></td>
-          <td class="text-center"><%= link_to 'Show', task, class:"btn btn-primary" %></td>
-          <td class="text-center"><%= link_to 'Edit', edit_task_path(task),class:"btn btn-info" %></td>
-          <td class="text-center"><%= link_to 'Delete', task, class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <td class="text-center"><%=link_to "Done", change_task_path(task, state:"done"), class:"btn btn-default", method: :put %></td>
-          <td class="text-center"><%=link_to "To do", change_task_path(task, state:"to do"), class:"btn btn-default", method: :put %></td>
-        </tr>
+      <%= render task %>
       <% end %>
     </tbody>
   </table>
@@ -63,25 +36,12 @@
 
   <table class="table table-striped table-hover">
     <thead>
-      <tr>
-        <th>Task ID</th>
-        <th>Content</th>
-        <th>State</th>
-        <th colspan="4"></th>
-      </tr>
+      <%= render 'tableheader'%>
     </thead>
 
     <tbody >
       <% @done.each do |task| %>
-        <tr>
-          <td><%= task.id %></td>
-          <td><%= task.content %></td>
-           <td><%= task.state %></td>
-          <td class="text-center"><%= link_to 'Show', task, class:"btn btn-primary" %></td>
-          <td class="text-center"><%= link_to 'Edit', edit_task_path(task),class:"btn btn-info" %></td>
-          <td class="text-center"><%= link_to 'Delete', task, class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-           <td class="text-center"><%=link_to "Doing", change_task_path(task, state:"doing"), class:"btn btn-default", method: :put %></td>
-        </tr>
+      <%= render task %>
       <% end %>
     </tbody>
   </table>
