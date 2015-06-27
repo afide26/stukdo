@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     end
   end
   
+  get "test" =>"pages#test"
   devise_for :views
   devise_for :users
   root 'pages#home'
