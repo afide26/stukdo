@@ -76,13 +76,17 @@
   -webkit-box-shadow: 2px -7px 15px 1px rgba(150,150,150,1);
   -moz-box-shadow: 2px -7px 15px 1px rgba(150,150,150,1);
   box-shadow: 2px -7px 15px 1px rgba(150,150,150,1);
-  height:40rem;
+  width: 100%;
+}
+
+.jumbocontent{
+  height: 35em;
 }
 
 /* LOGO */
 
 .logo{
-  width:200px;
+  width:20%;
 }
 .navbar-brand, .logotext{
   color: white;
